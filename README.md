@@ -31,7 +31,7 @@ Follow these steps to set up the project locally:
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/paytm-clone.git
+   git clone https://github.com/harhs21/Paytm-Clone.git
    cd paytm-clone
    ```
 
@@ -42,11 +42,6 @@ Follow these steps to set up the project locally:
 
 3. **Set Up Environment Variables**
    Create a `.env` file in the root directory and add the following:
-   ```env
-   DATABASE_URL=postgres://username:password@localhost:5432/paytm_clone
-   NEXT_PUBLIC_API_KEY=your_api_key
-   SESSION_SECRET=your_secret
-   ```
 
 4. **Initialize Database**
    Create the database and run migrations:
@@ -89,9 +84,7 @@ Contributions are welcome! To contribute:
 4. Push to the branch (`git push origin feature-name`).
 5. Open a Pull Request.
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
