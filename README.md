@@ -1,20 +1,99 @@
-- Clone the repo
+# Paytm Clone
 
-```jsx
-git clone https://github.com/100xdevs-cohort-2/week-17-final-code
+A clone of the popular Paytm application built using Next.js for the frontend and PostgreSQL as the database. This project demonstrates the core functionalities of a payment platform with a modern tech stack.
+
+## Features
+
+- **User Authentication:** Secure user login and registration.
+- **Payment Gateway:** Simulated payment functionality.
+- **Wallet System:** Users can manage their wallets, view balance, and transaction history.
+- **Transaction Management:** Track and record user transactions.
+- **Responsive Design:** Fully optimized for both desktop and mobile.
+
+## Tech Stack
+
+- **Frontend:** Next.js
+- **Backend:** API routes in Next.js
+- **Database:** PostgreSQL
+- **Styling:** Tailwind CSS
+
+## Installation
+
+Follow these steps to set up the project locally:
+
+### Prerequisites
+
+- Node.js (v16 or higher)
+- PostgreSQL (v13 or higher)
+- Git
+
+### Steps
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/yourusername/paytm-clone.git
+   cd paytm-clone
+   ```
+
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Set Up Environment Variables**
+   Create a `.env` file in the root directory and add the following:
+   ```env
+   DATABASE_URL=postgres://username:password@localhost:5432/paytm_clone
+   NEXT_PUBLIC_API_KEY=your_api_key
+   SESSION_SECRET=your_secret
+   ```
+
+4. **Initialize Database**
+   Create the database and run migrations:
+   ```bash
+   npx prisma migrate dev --name init
+   ```
+
+5. **Run the Development Server**
+   ```bash
+   npm run dev
+   ```
+   Access the app at `http://localhost:3000`.
+
+## Project Structure
+
+```
+|-- pages
+|   |-- api
+|   |   |-- auth.js       # Authentication APIs
+|   |   |-- transactions.js  # Transaction APIs
+|-- components
+|   |-- Header.js        # Navbar and header
+|   |-- Wallet.js        # Wallet-related components
+|-- styles
+|   |-- globals.css      # Global CSS
+|-- prisma
+|   |-- schema.prisma    # Database schema
 ```
 
-- npm install
-- Run postgres either locally or on the cloud (neon.tech)
+## Screenshots
 
-```jsx
-docker run  -e POSTGRES_PASSWORD=mysecretpassword -d -p 5432:5432 postgres
-```
+Add screenshots of the application here to showcase its features.
 
-- Copy over all .env.example files to .env
-- Update .env files everywhere with the right db url
-- Go to `packages/db`
-    - npx prisma migrate dev
-    - npx prisma db seed
-- Go to `apps/user-app` , run `npm run dev`
-- Try logging in using phone - 1111111111 , password - alice (See `seed.ts`)
+## Contributing
+
+Contributions are welcome! To contribute:
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-name`).
+3. Commit your changes (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature-name`).
+5. Open a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Paytm for the inspiration.
+- Open Source Libraries and Tools used in this project.
